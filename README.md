@@ -7,7 +7,7 @@ Another word for “windowing” some data with a “window” (or “taper”) 
 
 ## Technical background
 
-Perhaps the classic way to motivate windowing data is the problem of separating sinusoids close in frequency. Suppose an instrument is playing A4 (nominally 440 Hz) loudly and another, much softer, instrument is trying to match the note: let the second instrument be 30 dB below the first, and at 443 Hz. If you compute spectrum of the raw clip, you’ll see the loud instrument at 440 Hz, but no sign of the quieter instrument. However, if you window the audio clip with a Taylor window and then find its spectrum, you’ll see the bump at 443 Hz.
+Perhaps the classic way to motivate windowing data is the problem of separating sinusoids close in frequency. Suppose an instrument is playing A4 (nominally 440 Hz) loudly and another, much softer, instrument is trying to match the note: let the second instrument be 30 dB below the first, and at 443 Hz. If you compute the spectrum of the raw clip, you’ll see the loud instrument at 440 Hz, but no sign of the quieter instrument. However, if you window the audio clip with a Taylor window and then find its spectrum, you’ll see the bump at 443 Hz.
 
 ![Unwindowed vs Taylor-window of synthetic audio clip](https://github.com/fasiha/taylorwin.js/raw/master/2.png)
 
@@ -21,7 +21,7 @@ x = sin(2 * pi * t * 440) + 0.0316 * sin(2 * pi * t * (440 + 3));
 
 Nfft = 1024 * 8;
 f = ([0 : Nfft - 1] / Nfft - 0.5) * fs; % Hz
-spectrum = @(x) fftshift(db20(fft(x, Nfft) / N));
+spectrum = @(x) fftshift(20 * log10(abs(fft(x, Nfft) / N)));
 plot(f, spectrum(x), f, spectrum(x .* arf.taylorwin(N, 4, -35)))
 ```
 
