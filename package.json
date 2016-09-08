@@ -1,6 +1,6 @@
 {
   "name": "taylorwin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Taylor windows. Suppress sidelobes! Design antenna arrays! Design linear filters!",
   "main": "dist/taylorwin.js",
   "jsnext:main": "src/taylorwin.js",
