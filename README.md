@@ -72,7 +72,13 @@ console.log(win);
 ## References
 The implementation is based on Carrara, Goodman, Majewski, *Spotlight synthetic aperture radar: signal processing algorithms*, Artech House, 1995, specifically Appendix D.2, pages 512–513.
 
+Here’s a photo of the relevant bits in case you doubt my math-to-code translation:
+
+![Pages 512-513 from Carrara, Goodman, Majewski](https://github.com/fasiha/taylorwin.js/raw/master/carrara.jpg)
+
 I also tried reading Taylor’s six-decades-new paper to find out more about these mysterious `F` weights, but didn’t get far. That reference is T.T. Taylor, “Design of line-source antennas for narrow beamwidth and low side lobes,” *Transactions of the IRE Professional Group on Antennas and Propagation*, v. 3, no. 1, pp. 16–28, Jan. 1955: [DOI](http://dx.doi.org/10.1109/TPGAP.1955.5720407).
+
+My Matlab port of this code is also available: [arf.taylorwin](https://github.com/fasiha/personal-matlab-namespace/blob/master/%2Barf/taylorwin.m).
 
 MATLAB’s documentation on [taylorwin](http://www.mathworks.com/help/signal/ref/taylorwin.html) (from their expensive Signal Processing Toolbox) may be useful.
 
