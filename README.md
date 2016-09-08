@@ -74,6 +74,7 @@ The implementation is based on Carrara, Goodman, Majewski, *Spotlight synthetic 
 
 I also tried reading Taylor’s six-decades-new paper to find out more about these mysterious `F` weights, but didn’t get far. That reference is T.T. Taylor, “Design of line-source antennas for narrow beamwidth and low side lobes,” *Transactions of the IRE Professional Group on Antennas and Propagation*, v. 3, no. 1, pp. 16–28, Jan. 1955: [DOI](http://dx.doi.org/10.1109/TPGAP.1955.5720407).
 
+MATLAB’s documentation on [taylorwin](http://www.mathworks.com/help/signal/ref/taylorwin.html) (from their expensive Signal Processing Toolbox) may be useful.
 
 ## License
 Unlicense/public domain. If it breaks anything, I didn’t do it. Free to use in commercial/closed-source-land. No citation required—in fact, if you use this, keep it to yourself.
