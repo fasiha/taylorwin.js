@@ -8,7 +8,7 @@ Another word for “windowing” some data with a “window” (or “taper”) 
 
 Perhaps the classic way to motivate windowing data is the problem of separating sinusoids close in frequency. Suppose an instrument is playing A4 (nominally 440 Hz) loudly and another, much softer, instrument is trying to match the note: let the second instrument be 30 dB below the first, and at 443 Hz. If you compute spectrum of the raw clip, you’ll see the loud instrument at 440 Hz, but no sign of the quieter instrument. However, if you window the audio clip with a Taylor window and then find its spectrum, you’ll see the bump at 443 Hz.
 
-![Unwindowed vs Taylor-window of synthetic audio clip](2.png)
+![Unwindowed vs Taylor-window of synthetic audio clip](https://github.com/fasiha/taylorwin.js/raw/master/2.png)
 
 The weak 443 Hz sinusoid is lost among the sidelobes of the strong 440 Hz one in the unwindowed spectrum (thin blue, above). With a Taylor window designed to suppress sidelobes to 35 dB below the mainlobe, it has a chance of being noticed. The Matlab code to generate the above:
 
