@@ -7,7 +7,7 @@
   "scripts": {
     "pretest": "rm -fr dist && mkdir -p dist && rollup -c",
     "test": "tape 'test/**/*-test.js'",
-    "build": "npm run test && uglifyjs dist/taylorwin.js -c -m -o dist/taylorwin.min.js"
+    "build": "npm run pretest && npm run test && uglifyjs dist/taylorwin.js -c -m -o dist/taylorwin.min.js"
   },
   "keywords": [
     "taylor",
