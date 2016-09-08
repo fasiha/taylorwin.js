@@ -19,6 +19,10 @@
   ],
   "author": "Ahmed Fasih",
   "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fasiha/taylorwin.js.git"
+  },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
